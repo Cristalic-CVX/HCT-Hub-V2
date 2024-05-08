@@ -73,7 +73,7 @@ end)
 btns:Seperator()
 
 btns:Button("https://discord.gg/dj42gKFVjN", function()
-    DiscordLib:Notification("Notification", "https://discord.gg/dj42gKFVjN")
+    DiscordLib:Notification("Notification", "https://discord.gg/dj42gKFVjN" , "Join Now ! ")
 end)
 local tgls = serv:Channel("Toggles")
 
