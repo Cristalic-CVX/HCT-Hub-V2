@@ -157,67 +157,67 @@ OtherTab:AddButton({
 
  -- Tools
 
- local OtherTab = Window:MakeTab({
+ local ToolsTab = Window:MakeTab({
     Name = "HCT-Tools ",
     Icon = "rbxassetid://4483345998",
     PremiumOnly = false
-   })
+})
    
-local Section = OtherTab:AddSection({
+local Section = ToolsTab:AddSection({
     Name = "Tools"
-   })
+ })
 
-   
-OtherTab:AddButton({
+
+ ToolsTab:AddButton({
     Name = "CamLock ",
     Callback = function()
         loadstring(game:HttpGet('https://raw.githubusercontent.com/elxocasXD/Trip-Hub/main/Scripts/Cam%20Lock.lua'))()
     end,
  })
 
- OtherTab:AddButton({
+ ToolsTab:AddButton({
     Name = "Boost FPS ",
     Callback = function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/CasperFlyModz/discord.gg-rips/main/FPSBooster.lua"))()
     end,
  })
 
- OtherTab:AddButton({
+ ToolsTab:AddButton({
     Name = "InfiniteYield",
     Callback = function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source"))()
     end,
  })
 
- OtherTab:AddButton({
+ ToolsTab:AddButton({
     Name = "Dex Explorer",
     Callback = function()
         loadstring(game:HttpGet("https://cdn.wearedevs.net/scripts/Dex%20Explorer.txt"))()
     end,
  })
 
- OtherTab:AddButton({
+ ToolsTab:AddButton({
     Name = "DarkDexV3",
     Callback = function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/Babyhamsta/RBLX_Scripts/main/Universal/BypassedDarkDexV3.lua", true))()
     end,
  })
 
- OtherTab:AddButton({
+ ToolsTab:AddButton({
     Name = "UniversalV3  ",
     Callback = function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/Babyhamsta/RBLX_Scripts/main/Universal/BypassedDarkDexV3.lua", true))()
     end,
  })
 
- OtherTab:AddButton({
+ ToolsTab:AddButton({
     Name = "Invisible script",
     Callback = function()
         loadstring(game:HttpGet("https://scriptblox.com/raw/Universal-Script-Invisible-script-toggle-V2-10847"))()
     end,
  })
 
- OtherTab:AddButton({
+ ToolsTab:AddButton({
    Name = "Fly",
    Callback = function()
        loadstring(game:HttpGet("https://cdn.wearedevs.net/scripts/Fly.txt"))()
