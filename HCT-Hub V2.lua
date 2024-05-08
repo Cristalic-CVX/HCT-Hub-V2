@@ -1,67 +1,73 @@
--- Tutorial Script Hub
+local DiscordLib = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/UI-Libs/main/discord%20lib.txt"))()
 
-local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shl...)
+local win = DiscordLib:Window("discord library")
 
-local Window = OrionLib:MakeWindow({Name = "Tutorial Hub", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
+local serv = win:Server("Preview", "")
 
+local btns = serv:Channel("Buttons")
 
--- player tab
+btns:Button("Kill all", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/cris123452/my/main/cas", true))()
+end)
 
-local PlayerTab = Window:MakeTab({
- Name = "Player",
- Icon = "rbxassetid://4483345998",
- PremiumOnly = false
-})
+btns:Seperator()
 
-local Section = PlayerTab:AddSection({
- Name = "Movement"
-})
+btns:Button("Get max level", function()
+    DiscordLib:Notification("Notification", "Max level!", "Okay!")
+end)
 
-PlayerTab:AddSlider({
- Name = "Walkspeed",
- Min = 16,
- Max = 500,
- Default = 16,
- Color = Color3.fromRGB(255,255,255),
- Increment = 1,
- ValueName = "WS",
- Callback = function(Value)
-  game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = Value
- end    
-})
+local tgls = serv:Channel("Toggles")
 
-PlayerTab:AddSlider({
- Name = "Jump Height",
- Min = 16,
- Max = 500,
- Default = 5,
- Color = Color3.fromRGB(255,255,255),
- Increment = 1,
- ValueName = "Height",
- Callback = function(Value)
-  game.Players.LocalPlayer.Character.Humanoid.JumpPower = Value
- end    
-})
+tgls:Toggle("Auto-Farm", false, function(bool)
+    print(bool)
+end)
 
+local sldrs = serv:Channel("Sliders")
 
---other tab
+local sldr = sldrs:Slider("Slide me!", 0, 1000, 400, function(t)
+    print(t)
+end)
 
-local OtherTab = Window:MakeTab({
- Name = "Other",
- Icon = "rbxassetid://4483345998",
- PremiumOnly = false
-})
+sldrs:Button("Change to 50", function()
+    sldr:Change(50)
+end)
 
-local Section = OtherTab:AddSection({
- Name = "Other"
-})
+local drops = serv:Channel("Dropdowns")
 
+local drop = drops:Dropdown("Pick me!", {"Option 1", "Option 2", "Option 3", "Option 4", "Option 5"}, function(bool)
+    print(bool)
+end)
 
-OtherTab:AddButton({
- Name = "Delete Doors",
- Callback = function()
-       game.Workspace.Doors:Destroy()
-   end    
-})
+drops:Button("Clear", function()
+    drop:Clear()
+end)
 
-OrionLib:Init()
+drops:Button("Add option", function()
+    drop:Add("Option")
+end)
+
+local clrs = serv:Channel("Colorpickers")
+
+clrs:Colorpicker("ESP Color", Color3.fromRGB(255, 1, 1), function(t)
+    print(t)
+end)
+
+local textbs = serv:Channel("Textboxes")
+
+textbs:Textbox("Gun power", "Type here!", true, function(t)
+    print(t)
+end)
+
+local lbls = serv:Channel("Labels")
+
+lbls:Label("This is just a label.")
+
+local bnds = serv:Channel("Binds")
+
+bnds:Bind("Kill bind", Enum.KeyCode.RightShift, function()
+    print("Killed everyone!")
+end)
+
+serv:Channel("by dawid#7205")
+
+win:Server("Main", "http://www.roblox.com/asset/?id=6031075938")    
