@@ -68,55 +68,55 @@ OtherTab:AddButton({
       end    
    })
 
- local Button = Tab:CreateButton({
+   OtherTab:AddButton({
     Name = "VG Arsenal",
     Callback = function()
         loadstring(game:HttpGet('https://raw.githubusercontent.com/1201for/V.G-Hub/main/V.Ghub'))()
     end,
  })
 
- local Button = Tab:CreateButton({
+ OtherTab:AddButton({
     Name = "Blade Ball",
     Callback = function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/FFJ1/Roblox-Exploits/main/scripts/Loader.lua"))()
     end,
  })
 
- local Button = Tab:CreateButton({
+ OtherTab:AddButton({
     Name = "Doors",
     Callback = function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/scriptpastebin/raw/main/Doors"))()
     end,
  })
 
- local Button = Tab:CreateButton({
+ OtherTab:AddButton({
     Name = "BloxFruits",
     Callback = function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/Yatsuraa/Yuri/main/Winterhub_V2.lua"))() 
     end,
  })
 
- local Button = Tab:CreateButton({
+ OtherTab:AddButton({
     Name = "Counter Blox",
     Callback = function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/fliskScript/jaran.vip/main/free.lua"))()
     end,
  })
 
- local Button = Tab:CreateButton({
+ OtherTab:AddButton({
     Name = "Slap Battles",
     Callback = function()
         loadstring(game:HttpGet(("https://raw.githubusercontent.com/Dusty1234567890/TestMain/main/SLAPBATTLESGUI5")))()
     end,
  })
- local Button = Tab:CreateButton({
+ OtherTab:AddButton({
     Name = "BrookHaven",
     Callback = function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/REDzHUB/REDzHUB/main/REDzHUB"))() 
     end,
  })
 
- local Button = Tab:CreateButton({
+ OtherTab:AddButton({
     Name = "Lumber Tycoon 2",
     Callback = function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/frencaliber/LuaWareLoader.lw/main/luawareloader.wtf",true))() 
@@ -124,14 +124,14 @@ OtherTab:AddButton({
  })
 
  
- local Button = Tab:CreateButton({
+ OtherTab:AddButton({
     Name = "Da hood",
     Callback = function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/ImagineProUser/vortexdahood/main/vortex", true))()
     end,
  })
 
- local Button = Tab:CreateButton({
+ OtherTab:AddButton({
    Name = "Doors",
    Callback = function()
       loadstring(game:HttpGet("https://raw.githubusercontent.com/FFJ1/Roblox-Exploits/main/scripts/Loader.lua"))()
@@ -139,14 +139,14 @@ OtherTab:AddButton({
 })
 
 
-local Button = Tab:CreateButton({
+OtherTab:AddButton({
     Name = "Tower of Hell",
     Callback = function()
        loadstring(game:HttpGet('https://raw.githubusercontent.com/sc0ttferren/robloxscripts/main/toh/sc0tt.lua'))()
     end,
  })
   
- local Button = Tab:CreateButton({
+ OtherTab:AddButton({
     Name = "Race Clicker",
     Callback = function()
        loadstring(game:HttpGetAsync("https://pastebin.com/raw/CUkKFaQy"))()
@@ -157,8 +157,16 @@ local Button = Tab:CreateButton({
 
  -- Tools
 
- local Tab = Window:CreateTab("Tools", 4483362458) -- Title, Image
-
+ local OtherTab = Window:MakeTab({
+    Name = "HCT-Tools ",
+    Icon = "rbxassetid://4483345998",
+    PremiumOnly = false
+   })
+   
+   local Section = OtherTab:AddSection({
+    Name = "Tools"
+   })
+   
  local Button = Tab:CreateButton({
     Name = "CamLock ",
     Callback = function()
