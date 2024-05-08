@@ -1,49 +1,87 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/GhostDuckyy/UI-Libraries/main/Neverlose/source.lua"))()
+-- Toggle UI: Library:Toggle()
 
-local uilibrary = loadstring(game:HttpGet("https://raw.githubusercontent.com/Kiet1308/tvkhub/main/rac"))()
-local windowz = uilibrary:CreateWindow("UI Library", "Game Name", true)
+local Window = Library:Window({
+    text = "Window"
+})
 
-local Page1 = windowz:CreatePage("Games Scripts")
+local TabSection = Window:TabSection({
+    text = "TabSection"
+})
 
+local Tab = TabSection:Tab({
+    text = "Tab",
+    icon = "rbxassetid://7999345313",
+})
 
-local Section1 = Page1:CreateSection("HCT-Script")
+local Section = Tab:Section({
+    text = "Section"
+})
 
-Section1:CreateSlider("Slider Example", {Min = 16, Max = 500, DefaultValue = 30}, function(Value)
-   print(Value)
-end)
+Section:Button({
+    text = "Button",
+    callback = function()
+        print("Clicked button")
+    end,
+})
 
-Section1:CreateToggle("Toggle Example", {Toggled=false , Description = false}, function(Value)
-   print(Value)
-end)
+Section:Toggle({
+    text = "Toggle",
+    state = false, -- Default boolean
+    callback = function(boolean)
+        print("Toggle current: ",boolean)
+    end
+})
 
-Section1:CreateButton("Button Example", function ()
-   print("Button Cliked!")
-end)
+Section:Slider({
+    text = "Slider",
+    min = 10,
+    max = 100,
+    -- [[Float = 0,]] Idk what it does
+    callback = function(number)
+        print(number)
+    end
+})
 
-Section1:CreateTextbox("TextBox", false, function (vv)
-   print(vv)
-end)
+Section:Dropdown({
+    text = "Dropdown",
+    list = {"Apple", "Banana","Coconut"},
+    default = "Apple",
+    callback = function(String)
+        print(String)
+    end
+})
 
-Section1:CreateDropdown("Dropdown ", {
-   List = {"Value1", "Value2", "Value3", "Value4"},
-   Default = "None"}, function(value)
-       print(value)
-end)
+Section:Textbox({
+    text = "Textbox",
+    value = "Default",
+    callback = function(String)
+        print(String)
+    end
+})
 
-Section1:CreateColorPicker("Color Picker", Color3.fromRGB(255, 255, 255), function ()
-   print("fsf")
-end)
+Section:Colorpicker({
+    text = "Colorpicker",
+    color = Color3.new(1,1,1),
+    callback = function(HSV)
+        print(HSV)
+    end
+})
 
-local dropdown = Section1:CreateDropdown("Refresh Dropdown ", {
-   List = {"Value1", "Value2", "Value3", "Value4"},
-   Default = "None"}, function(value)
-       print(value)
-end)
+--[[
+    blacklisted keybind:
+        Return
+        Space
+        Tab
+        W,A,S,D,I,O
+        Unknown
+]]
 
-
-
-Section1:CreateButton("Refresh Example", function ()
-   local newlist = {"resf", "uwua", "fsk"}
-   dropdown:Clear()
-   wait(1)
-   dropdown:Add(newlist)
-end)
+Section:Keybind({
+    text = "Keybind",
+    default = Enum.KeyCode.Z,
+    callback = function(defaultBind)
+        print("Triggered keybind")
+        print(defaultBind)
+    end
+})
