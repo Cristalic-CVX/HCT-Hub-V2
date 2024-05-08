@@ -157,16 +157,18 @@ OtherTab:AddButton({
 
  -- Tools
 
- OtherTab:AddButton({
+ local OtherTab = Window:MakeTab({
     Name = "HCT-Tools ",
     Icon = "rbxassetid://4483345998",
     PremiumOnly = false
    })
    
-OtherTab:AddButton({
+local Section = OtherTab:AddSection({
     Name = "Tools"
    })
- local Button = Tab:CreateButton({
+
+   
+OtherTab:AddButton({
     Name = "CamLock ",
     Callback = function()
         loadstring(game:HttpGet('https://raw.githubusercontent.com/elxocasXD/Trip-Hub/main/Scripts/Cam%20Lock.lua'))()
