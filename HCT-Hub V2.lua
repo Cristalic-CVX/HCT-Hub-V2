@@ -73,7 +73,7 @@ end)
 btns:Seperator()
 
 btns:Button("https://discord.gg/dj42gKFVjN", function()
-    print("https://discord.gg/dj42gKFVjN")
+    DiscordLib:Notification("Notification", "https://discord.gg/dj42gKFVjN")
 end)
 local tgls = serv:Channel("Toggles")
 
@@ -130,11 +130,3 @@ end)
 
 
 win:Server("Main", "http://www.roblox.com/asset/?id=6031075938")
-
-print("https://discord.gg/dj42gKFVjN")
-print("https://discord.gg/dj42gKFVjN")
-print("https://discord.gg/dj42gKFVjN")
-
-print("This script have been created by HCT !")
-print("This script have been created by HCT !")
-print("This script have been created by HCT !")
