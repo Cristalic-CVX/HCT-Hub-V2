@@ -12,7 +12,7 @@ local PlayerTab = Window:MakeTab({
 })
 
 local Section = PlayerTab:AddSection({
- Name = "Movement"
+ Name = "this script cannot always work on all games !"
 })
 
 PlayerTab:AddSlider({
@@ -22,7 +22,7 @@ PlayerTab:AddSlider({
  Default = 16,
  Color = Color3.fromRGB(255,255,255),
  Increment = 1,
- ValueName = "WS",
+ ValueName = "Speed",
  Callback = function(Value)
   game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = Value 
  end    
@@ -55,13 +55,19 @@ local Section = OtherTab:AddSection({
 })
 
 
-local Button = Tab:CreateButton({
+OtherTab:AddButton({
     Name = "OP Arsenal",
     Callback = function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/cris123452/my/main/cas",true))()
     end,
  })
- 
+ OtherTab:AddButton({
+    Name = "Delete Doors",
+    Callback = function()
+          game.Workspace.Doors:Destroy()
+      end    
+   })
+
  local Button = Tab:CreateButton({
     Name = "VG Arsenal",
     Callback = function()
