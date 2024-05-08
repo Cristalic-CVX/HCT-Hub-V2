@@ -1,13 +1,14 @@
+-- Tutorial Script Hub
 
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shl...)
 
-local Window = OrionLib:MakeWindow({Name = "HCT-Hub V1.5", HidePremium = false, SaveConfig = true, ConfigFolder = "HCT loading ..."})
+local Window = OrionLib:MakeWindow({Name = "Tutorial Hub", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
 
 
 -- player tab
 
 local PlayerTab = Window:MakeTab({
- Name = "HCT-Player",
+ Name = "Player",
  Icon = "rbxassetid://4483345998",
  PremiumOnly = false
 })
