@@ -208,3 +208,5 @@ local Button = Tab:CreateButton({
        loadstring(game:HttpGet("https://cdn.wearedevs.net/scripts/Fly.txt"))()
    end,
 })
+
+OrionLib:Init()
