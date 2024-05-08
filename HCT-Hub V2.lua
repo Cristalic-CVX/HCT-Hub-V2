@@ -55,7 +55,7 @@ local Section = OtherTab:AddSection({
 })
 
 
-OtherTab:AddButton({
+ OtherTab:AddButton({
     Name = "OP Arsenal",
     Callback = function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/cris123452/my/main/cas",true))()
@@ -157,16 +157,15 @@ OtherTab:AddButton({
 
  -- Tools
 
- local OtherTab = Window:MakeTab({
+ OtherTab:AddButton({
     Name = "HCT-Tools ",
     Icon = "rbxassetid://4483345998",
     PremiumOnly = false
    })
    
-   local Section = OtherTab:AddSection({
+OtherTab:AddButton({
     Name = "Tools"
    })
-   
  local Button = Tab:CreateButton({
     Name = "CamLock ",
     Callback = function()
@@ -174,49 +173,49 @@ OtherTab:AddButton({
     end,
  })
 
- local Button = Tab:CreateButton({
+ OtherTab:AddButton({
     Name = "Boost FPS ",
     Callback = function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/CasperFlyModz/discord.gg-rips/main/FPSBooster.lua"))()
     end,
  })
 
- local Button = Tab:CreateButton({
+ OtherTab:AddButton({
     Name = "InfiniteYield",
     Callback = function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source"))()
     end,
  })
 
- local Button = Tab:CreateButton({
+ OtherTab:AddButton({
     Name = "Dex Explorer",
     Callback = function()
         loadstring(game:HttpGet("https://cdn.wearedevs.net/scripts/Dex%20Explorer.txt"))()
     end,
  })
 
- local Button = Tab:CreateButton({
+ OtherTab:AddButton({
     Name = "DarkDexV3",
     Callback = function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/Babyhamsta/RBLX_Scripts/main/Universal/BypassedDarkDexV3.lua", true))()
     end,
  })
 
- local Button = Tab:CreateButton({
+ OtherTab:AddButton({
     Name = "UniversalV3  ",
     Callback = function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/Babyhamsta/RBLX_Scripts/main/Universal/BypassedDarkDexV3.lua", true))()
     end,
  })
 
- local Button = Tab:CreateButton({
+ OtherTab:AddButton({
     Name = "Invisible script",
     Callback = function()
         loadstring(game:HttpGet("https://scriptblox.com/raw/Universal-Script-Invisible-script-toggle-V2-10847"))()
     end,
  })
 
- local Button = Tab:CreateButton({
+ OtherTab:AddButton({
    Name = "Fly",
    Callback = function()
        loadstring(game:HttpGet("https://cdn.wearedevs.net/scripts/Fly.txt"))()
